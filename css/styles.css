@@ -10168,8 +10168,8 @@ section.resume-section .resume-section-content {
 
 /* Elementi per slideshow */
 .slidershow{
-  width: 37.5vmax;
-  height: 22.5vmax;
+  width: 29vmax;
+  height: 22vmax;
   overflow: hidden;
 }
 .middle{
@@ -10210,12 +10210,12 @@ input[name="r"]{
 }
 
 .slide{
-  width: 20%;
+  width: -100%;
   transition: 0.8s;
 }
 .slide img{
-  width: 37.5vmax;
-  height: 22.5vmax;
+  width: 29vmax;
+  height: 22vmax;
 }
 
 #r1:checked ~ .s1{
