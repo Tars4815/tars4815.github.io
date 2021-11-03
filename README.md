@@ -10,5 +10,6 @@ https://tars4815.github.io/
 * Languages
 * Activities
 * Affiliations
+* Portfolio
 
 Last update: 28/09/2021
