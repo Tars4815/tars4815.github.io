@@ -1,15 +1,8 @@
 # Personal website - Federica Gaspari
 
-## // Work in progress //
+Personal web page with information about education, professional experience, activities and more.
+A web portfolio is included on the landing page.
 
 https://tars4815.github.io/
 
-**Sections to be updated**:
-* About
-* Skills
-* Languages
-* Activities
-* Affiliations
-* Portfolio
-
-Last update: 28/09/2021
+Last update: 13/07/2022
