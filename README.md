@@ -5,4 +5,3 @@ A web portfolio is included on the landing page.
 
 https://tars4815.github.io/
 
-Last update: 13/07/2022
