@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>Portfolio | Federica Gaspari</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!--Parte Mappa-->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--Fine Parte Mappa-->
+    <meta name="description" content="Federica Gaspari personal portfolio page" />
+    <meta name="author" content="Federica Gaspari" />
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons -->
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet"
+        type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS -->
+    <link href="../css/styles.css" rel="stylesheet" />
+
+    <!-- CSS for mappa-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <style>
+        #map {
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <span class="d-block d-lg-none">Federica Gaspari</span>
+            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2"
+                    src="../assets/img/profile.jpg" alt="" /></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#about">About</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#experience">Experience</a>
+                </li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#education">Education</a>
+                </li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#interests">Activities</a>
+                </li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#hobbies">Hobbies</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html">Portfolio</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid p-0">
+        <!-- Intro Section -->
+        <section class="resume-section" id="intro">
+            <div class="resume-section-content">
+                <h1 class="mb-0">
+                    Portfolio
+                </h1>
+                <div class="subheading mb-5">
+                    Projects & Maps
+                </div>
+                <ul class="fa-ul mb-0">
+                    <li>
+                        <h3><span class="fa-li"><i class="fas fa-layer-group"></i></span>
+                            <a href="#GIS">Geographic Information Systems</a>
+                        </h3>
+                    </li>
+                    <li>
+                        <h3><span class="fa-li"><i class="fas fa-map-marked-alt"></i></span>
+                            <a href="#Collaborative Mapping">Collaborative Mapping</a>
+                        </h3>
+                    </li>
+                    <li>
+                        <h3><span class="fa-li"><i class="fas fa-cube"></i></span>
+                            <a href="#3D inspections">3D inspections for infrastructures</a>
+                        </h3>
+                    </li>
+                    <li>
+                        <h3><span class="fa-li"><i class="fas fa-route"></i></span>
+                            <a href="#geodataviz">Spatial Data Visualization</a>
+                        </h3>
+                    </li>
+                    <li>
+                        <div class="map" id="map"></div>
+                        <script>
+                            var map = L.map('map').setView([27.49372, -31.02192], 2);
+                            L.tileLayer('https://api.maptiler.com/maps/pastel/{z}/{x}/{y}.png?key=2hTOFLPdXApzq9gVeMKq', {
+                                attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
+                            }).addTo(map);
+
+                            var geojson = {
+                                "type": "FeatureCollection",
+                                "features": [{
+                                    "type": "Feature",
+                                    "properties": {
+                                        "Titolo": "Digitization of urban planning procedures",
+                                        "Tipo": "GIS",
+                                        "Info": "<a href='portfolio.html#bobbio'>More info about the project</a>",
+                                        "Place": "Bobbio (PC)"
+                                    },
+                                    "geometry": {
+                                        "type": "Point",
+                                        "coordinates": [9.386646416351239, 44.766409549701486]
+                                    }
+                                }, {
+                                    "type": "Feature",
+                                    "properties": {
+                                        "Titolo": "Architecture for Smart City",
+                                        "Tipo": "Collaborative Mapping",
+                                        "Info": "<a href='portfolio.html#arch4sc'>More info about the project</a>",
+                                        "Place": "Piacenza (PC)"
+                                    },
+                                    "geometry": {
+                                        "type": "Point",
+                                        "coordinates": [9.702981381013617, 45.046844058296053]
+                                    }
+                                }, {
+                                    "type": "Feature",
+                                    "properties": {
+                                        "Titolo": "Geo-tagged social media post patterns in the attendance of fair",
+                                        "Tipo": "GIS",
+                                        "Info": "<a href='portfolio.html#expo-2015'>More info about the project</a>",
+                                        "Place": "Milano"
+                                    },
+                                    "geometry": {
+                                        "type": "Point",
+                                        "coordinates": [9.092491149904767, 45.52182212001324]
+                                    }
+                                }, {
+                                    "type": "Feature",
+                                    "properties": {
+                                        "Titolo": "Dam Inspection - Diga di Nocelle",
+                                        "Tipo": "3D Inspections",
+                                        "Info": "<a href='portfolio.html#dams'>More info about the project</a>",
+                                        "Place": "San Giovanni in Fiore (CS)"
+                                    },
+                                    "geometry": {
+                                        "type": "Point",
+                                        "coordinates": [16.545566879100647, 39.24516091291531]
+                                    }
+                                }, {
+                                    "type": "Feature",
+                                    "properties": {
+                                        "Titolo": "Dam Inspection - Diga di Poverella",
+                                        "Tipo": "3D Inspections",
+                                        "Info": "<a href='portfolio.html#dams'>More info about the project</a>",
+                                        "Place": "Parenti (CS)"
+                                    },
+                                    "geometry": {
+                                        "type": "Point",
+                                        "coordinates": [16.491047749937643, 39.178522673523048]
+                                    }
+                                }, {
+                                    "type": "Feature",
+                                    "properties": {
+                                        "Titolo": "Bridge Inspection - Lugagnano Val d'Arda",
+                                        "Tipo": "3D Inspections",
+                                        "Info": "<a href='portfolio.html#bridges'>More info about the project</a>",
+                                        "Place": "Lugagnano Val d'Arda (PC)"
+                                    },
+                                    "geometry": {
+                                        "type": "Point",
+                                        "coordinates": [9.831730034511873, 44.819952627653393]
+                                    }
+                                }, {
+                                    "type": "Feature",
+                                    "properties": {
+                                        "Titolo": "Bridge Inspection - Castell'Arquato",
+                                        "Tipo": "3D Inspections",
+                                        "Info": "<a href='portfolio.html#bridges'>More info about the project</a>",
+                                        "Place": "Castell'Arquato (PC)"
+                                    },
+                                    "geometry": {
+                                        "type": "Point",
+                                        "coordinates": [9.872823933605064, 44.852933546431977]
+                                    }
+                                }, {
+                                    "type": "Feature",
+                                    "properties": {
+                                        "Titolo": "Bridge Inspection",
+                                        "Tipo": "3D Inspections",
+                                        "Info": "<a href='portfolio.html#bridges'>More info about the project</a>",
+                                        "Place": "Cortemaggiore (PC)"
+                                    },
+                                    "geometry": {
+                                        "type": "Point",
+                                        "coordinates": [9.937719272289108, 44.994817141733499]
+                                    }
+                                }, {
+                                    "type": "Feature",
+                                    "properties": {
+                                        "Titolo": "Collaborative mapping of slums",
+                                        "Tipo": "Collaborative Mapping",
+                                        "Info": "<a href='portfolio.html#Bogota'>More info about the project</a>",
+                                        "Place": "Bogotà and Soacha"
+                                    },
+                                    "geometry": {
+                                        "type": "Point",
+                                        "coordinates": [-74.175827083958978, 4.57657253841696]
+                                    }
+                                }, {
+                                    "type": "Feature",
+                                    "properties": {
+                                        "Titolo": "Bridge inspection",
+                                        "Tipo": "3D Inspections",
+                                        "Info": "<a href='portfolio.html#bridges'>More info about the project</a>",
+                                        "Place": "Carpaneto Piacentino (PC)"
+                                    },
+                                    "geometry": {
+                                        "type": "Point",
+                                        "coordinates": [9.764709370733787, 44.920009843124618]
+                                    }
+                                }, {
+                                    "type": "Feature",
+                                    "properties": {
+                                        "Titolo": "Natural disaster impact analysis parsing geo-tagged social media post",
+                                        "Tipo": "GIS",
+                                        "Info": "<a href='portfolio.html#florence'>More info about the project</a>",
+                                        "Place": "Carolinas (US)"
+                                    },
+                                    "geometry": {
+                                        "type": "Point",
+                                        "coordinates": [-77.91312, 34.22761]
+                                    }
+                                }, {
+                                    "type": "Feature",
+                                    "properties": {
+                                        "Titolo": "Interactive maps for IlTermopolio",
+                                        "Tipo": "Spatial Data Vizualisation",
+                                        "Info": "<a href='portfolio.html#termopolio'>More info about the project</a>",
+                                        "Place": "Pisa"
+                                    },
+                                    "geometry": {
+                                        "type": "Point",
+                                        "coordinates": [10.40290, 43.71412]
+                                    }
+                                }
+                                ]
+                            }
+
+                            L.geoJSON(geojson).bindPopup(function (layer) {
+                                return "<b>" + layer.feature.properties.Titolo + "</b>" + "</br>" + "<i>" + layer.feature.properties.Tipo + "</i> - " + layer.feature.properties.Place + "</br>" + layer.feature.properties.Info
+                            }).addTo(map)
+                        </script>
+                    </li>
+
+            </div>
+            <p class="lead mb-5">
+                <br>
+            </p>
+        </section>
+        <hr class="m-0" />
+    </div>
+
+    <section class="resume-section" id="GIS">
+        <div class="resume-section-content">
+            <h2><i class="fas fa-layer-group"></i> Geographic Information System</h2>
+            <h4 class="mb-0" style="color: #824027">Mobile editing for the Piacenza Catasto Strade</h4>
+            <p><i>May 2021 - ongoing</i></p>
+            <p>Definition of an integrated procedure for the in situ data collection in a multi-user mobile environment.
+                The goal of the project is to develop a workflow for a more efficient update of the Catasto Strade, the
+                road infrastructure database at the provincial scale.
+                <br>
+                <u>Tools:</u> QGIS, Qfield, PostGIS, Input, ODK Collect, Python<br>
+                <u>Partners:</u> Provincia di Piacenza
+            </p>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <blockquote>
+                    <div class="slideshow-container">
+                        <div class="mySlides slide">
+                          <!--Defining the number of the image-->
+                          <div class="photo-slide">
+                            <img src="../assets/img/catasto-pc-1.png" style="display: inline-block; height:50%; width:50%; border-radius: 15px; margin: auto; border: 0.5rem solid rgba(255, 255, 255, 0.2);">
+                          </div>
+                          <div class="text">In-situ test</div>
+                        </div>
+                        <div class="mySlides slide">
+                          <div class="photo-slide">
+                            <img src="../assets/img/catasto-pc-2.png" style="height:50%; width:50%; border-radius: 15px; margin: auto; border: 0.5rem solid rgba(255, 255, 255, 0.2);">
+                          </div>
+                          <div class="text">In-situ test</div>
+                        </div>
+                      </div>
+                      <br>
+                      <!--Indication of current image-->
+                      <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1,0)"></span>
+                        <span class="dot" onclick="currentSlide(2,0)"></span>
+                      </div>
+                </blockquote>
+            </div>
+            <h4 class="mb-0" style="color:#824027" id="bobbio">Digitization of urban planning procedures in Bobbio (PC)
+            </h4>
+            <p><i>December 2020 - May 2022</i></p>
+            <p>Development and implementation of procedures in GIS environment for the management of geo-referenced
+                information flows with open-source tools. Digitization of the local strategic plan (PRG) and its
+                integration with cadastral data in order
+                to simplify routine procedures dealing with geospatial data. <br>
+                An introductory course to QGIS and the custom scripts was given to targeted users in the technical office.<br>
+                <u>Tools:</u> QGIS, Python <br>
+                <u>Partners:</u> Comune di Bobbio
+            </p>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <blockquote>
+                    <div class="slideshow-container">
+                        <div class="photo-slide">
+                            <img src="../assets/img/bobbio-1.png" style="display: inline-block; width:50%; border-radius: 15px; margin: auto; border: 0.5rem solid rgba(255, 255, 255, 0.2);">
+                        </div>
+                        <div class="text" style="color:#824027">PRG original cartography</div>
+                    </div>
+                </blockquote>
+            </div>
+            <h4 class="mb-0" style="color:#824027" id="florence">Natural disaster impact analysis parsing geo-tagged
+                social media post
+            </h4>
+            <p><i>October 2019 - September 2020</i></p>
+            <p>Master thesis project focused on on the computation of possible geo-statistical and temporal analysis on
+                Twitter posts published during the hurricane Florence emergency that occurred in the United States of
+                America in 2018. The spatial and temporal distribution of geolocated posts has been analysed at
+                different scales, exploring the composition of the Social Media Geographic Information dataset, and
+                identifying at a global scale the
+                areas characterized by a higher level of social media activity. More detailed geostatistical analyses
+                have been performed in order to evaluate the significance of the given geolocated tweets with respect to
+                the natural disaster. <br>
+                <u>Tools:</u> Python, MATLAB, QGIS, ArcGIS <br>
+                <a href="https://www.researchgate.net/publication/353014257_Geolocated_Twitter_data_as_a_proxy_for_the_analysis_of_natural_disasters_the_hurricane_Florence_case_study"
+                    title="Full text" alt="Full text" target="_blank">Full text</a> - <a
+                    href="https://drive.google.com/file/d/1qKMGsUDelqKV_5D2S4e1XqqKUwE3Rx0J/view?usp=sharing"
+                    title="Presentation" alt="Presentation" target="_blank">Presentation</a>
+            </p>
+            
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <blockquote>
+                    <div class="slideshow-container">
+                        <div class="mySlides slide2">
+                          <!--Defining the number of the image-->
+                          <div class="photo-slide">
+                            <img src="../assets/img/GetisDaymod3.png" style="display: inline-block; height:50%; width:50%; border-radius: 15px; margin: auto; border: 0.5rem solid rgba(255, 255, 255, 0.2);">
+                          </div>
+                          <div class="text" style="color:#824027">Geostatistical indexes computation for geotagged tweets</div>
+                        </div>
+                        <div class="mySlides slide2">
+                          <div class="photo-slide">
+                            <img src="../assets/img/ProjectFlorenceKernel.png" style="height:50%; width:50%; border-radius: 15px; margin: auto; border: 0.5rem solid rgba(255, 255, 255, 0.2);">
+                          </div>
+                          <div class="text" style="color:#824027">Tweets kernel density compared to total rainfall</div>
+                        </div>
+                        <div class="mySlides slide2">
+                            <div class="photo-slide">
+                              <img src="../assets/img/Comparison.png" style="height:50%; width:50%; border-radius: 15px; margin: auto; border: 0.5rem solid rgba(255, 255, 255, 0.2);">
+                            </div>
+                            <div class="text" style="color:#824027">Temporal distribution of hurricane-related tweets in the Carolinas</div>
+                        </div>
+                    </div>
+                    <br>
+                    <!--Indication of current image-->
+                    <div style="text-align:center">
+                        <span class="dot2" onclick="currentSlide(1, 1)"></span>
+                        <span class="dot2" onclick="currentSlide(2, 1)"></span>
+                        <span class="dot2" onclick="currentSlide(3, 1)"></span>
+                    </div>
+                </blockquote>
+            </div>
+            <h4 class="mb-0" style="color:#824027" id="expo-2015">Geo-tagged social media post patterns in the
+                attendance of fair</h4>
+            <p><i>April 2017 - September 2017</i></p>
+            <p>Bachelor thesis project focused on the use of some possible spatial and statistical
+                analysis that can be performed thanks to the geographical information associated to Instagram posts
+                related to Expo 2015, an event of international appeal held in Milan in the exhibition area of Rho Fiera
+                Milano. The data, coming from the social network based on the publication of images, were studied thanks
+                to the use of Geographic Information System (GIS). The results of
+                the different operations are considered in relation to the context of the event and the territory.
+                <br>
+                <u>Tools:</u> ArcGIS, QGIS, OpenStreetMap <br>
+                <a href="https://www.researchgate.net/publication/353014434_Social_Media_Geographic_Information_analisi_geostatistiche_sui_dati_di_Instagram"
+                    title="Full Text [ITA]" alt="Full Text [ITA]" target="_blank">Full Text [ITA]</a> - <a
+                    href="https://drive.google.com/file/d/1qKMGsUDelqKV_5D2S4e1XqqKUwE3Rx0J/view?usp=sharing"
+                    title="Presentation [ITA]" alt="Presentation [ITA]" target="_blank">Presentation [ITA]</a>
+            </p>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <blockquote>
+                    <div class="slideshow-container">
+                        <div class="mySlides slide3">
+                          <!--Defining the number of the image-->
+                          <div class="photo-slide">
+                            <img src="../assets/img/image6.png" style="display: inline-block; height:50%; width:50%; border-radius: 15px; margin: auto; border: 0.5rem solid rgba(255, 255, 255, 0.2);">
+                          </div>
+                          <div class="text" style="color:#824027">Instagram post for EXPO 2015 Pavilion</div>
+                        </div>
+                        <div class="mySlides slide3">
+                          <div class="photo-slide">
+                            <img src="../assets/img/image21.png" style="height:50%; width:50%; border-radius: 15px; margin: auto; border: 0.5rem solid rgba(255, 255, 255, 0.2);">
+                          </div>
+                          <div class="text" style="color:#824027">Hot-spot analysis on geo-tagged Instagram posts</div>
+                        </div>
+                        <div class="mySlides slide3">
+                            <div class="photo-slide">
+                              <img src="../assets/img/image4.png" style="height:50%; width:50%; border-radius: 15px; margin: auto; border: 0.5rem solid rgba(255, 255, 255, 0.2);">
+                            </div>
+                            <div class="text" style="color:#824027">Complete dataset of Instagram posts</div>
+                        </div>
+                    </div>
+                    <br>
+                    <!--Indication of current image-->
+                    <div style="text-align:center">
+                        <span class="dot3" onclick="currentSlide(1, 2)"></span>
+                        <span class="dot3" onclick="currentSlide(2, 2)"></span>
+                        <span class="dot3" onclick="currentSlide(3, 2)"></span>
+                    </div>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+    <section class="resume-section" id="Collaborative Mapping">
+        <div class="resume-section-content">
+            <h2><i class="fas fa-map-marked-alt"></i> Collaborative Mapping</h2>
+            <h4 class="mb-0" style="color:#824027" id="Bogota">Informal settlements in Bogotá</h4>
+            <p><i>December 2020 - July 2021</i></p>
+            <p>Design and coordination of the PoliMappers project focused on Slums upgrading in the border between
+                Bogotá and Soacha. The collaboration consisted in three steps consisting in the coordination of the
+                collection of streetlevel imagery on field,
+                mapping of target features (healthcare places, shops and amenities) in OpenStreetMap and proximity
+                analysis and statistics computation on the distribution of features in the case study area. The
+                crowdsourced data, collected on field in
+                Colombia and collaboratively digitised remotely during a so-called mapathon, were used as input for the
+                computation of social and environmental SDGs indexes in the informal settlements.<br>
+                <u>Tools:</u> QGIS, Mapillary, OSM, OverpassTurbo <br>
+                <u>Partners:</u> <a href="https://polimappers.github.io/" title="PoliMappers website"
+                    alt="PoliMappers website" target="_blank">PoliMappers</a>, <a href="http://www.immdesignlab.com/"
+                    title="IMMDesignLab" alt="IMMDesignlab" target="_blank">IMMDesignLab</a>, <a
+                    href="https://www.techo.org/colombia/" target="_blank">TECHO Colombia</a>,
+                <a href="https://www.youthmappers.org/" target="_blank">YouthMappers</a>, Semillero GeoLab UdeA
+            </p>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <blockquote>
+                    <div class="slideshow-container">
+                        <div class="mySlides slide4">
+                          <!--Defining the number of the image-->
+                          <div class="photo-slide">
+                            <img src="../assets/img/3.png" style="display: inline-block; height:50%; width:50%; border-radius: 15px; margin: auto; border: 0.5rem solid rgba(255, 255, 255, 0.2);">
+                          </div>
+                          <div class="text" style="color:#824027">Street-level imagery acquisition</div>
+                        </div>
+                        <div class="mySlides slide4">
+                          <div class="photo-slide">
+                            <img src="../assets/img/2.png" style="height:50%; width:50%; border-radius: 15px; margin: auto; border: 0.5rem solid rgba(255, 255, 255, 0.2);">
+                          </div>
+                          <div class="text" style="color:#824027">Meetings and training with the international partners based in Bogotá</div>
+                        </div>
+                        <div class="mySlides slide4">
+                            <div class="photo-slide">
+                              <img src="../assets/img/1.png" style="height:50%; width:50%; border-radius: 15px; margin: auto; border: 0.5rem solid rgba(255, 255, 255, 0.2);">
+                            </div>
+                            <div class="text" style="color:#824027">Mapping activities in the area of Bogotá</div>
+                        </div>
+                    </div>
+                    <br>
+                    <!--Indication of current image-->
+                    <div style="text-align:center">
+                        <span class="dot4" onclick="currentSlide(1, 3)"></span>
+                        <span class="dot4" onclick="currentSlide(2, 3)"></span>
+                        <span class="dot4" onclick="currentSlide(3, 3)"></span>
+                    </div>
+
+                    <p>Articles about the project: <a
+                            href="https://www.progressinresearch.polimi.it/polimappers-in-bogota-for-humanitarian-mapping/"
+                            target="_blank">Politecnico website.</a></p>
+                </blockquote>
+            </div>
+            <h4 class="mb-0" style="color:#824027" id="arch4sc">Architecture for Smart City Piacenza</h4>
+            <p><i>February - June 2020</i></p>
+            <p>
+                Collaboration with IMMDesignLab for the Architecture for Smart City course at Politecnico di Milano -
+                Piacenza campus introducing 80 students to the use and application of Volunteered Geographic Information
+                and open geospatial data using Mapillary and
+                OpenStreetMap for mapping shops in Piacenza. The project was a focal component of the laboratory part of
+                the course adopting blended teaching model. <br>
+                <u>Tools:</u> QGIS, Mapillary, OSM <br>
+                <u>Partners:</u> PoliMappers, IMMDesignLab
+            </p>
+            <blockquote class="twitter-tweet">
+                <p lang="en" dir="ltr">Can you spot the differences? 📷<br>The green dotted lines represent the new
+                    photo sequences captured and uploaded on <a
+                        href="https://twitter.com/mapillary?ref_src=twsrc%5Etfw">@mapillary</a> by the students of
+                    &quot;Architecture 4 Smart
+                    City&quot; last week in Piacenza.<br>Impressive results from the collab w/ <a
+                        href="https://twitter.com/immdesignlab?ref_src=twsrc%5Etfw">@immdesignlab</a><a
+                        href="https://twitter.com/youthmappers?ref_src=twsrc%5Etfw">@youthmappers</a> | <a
+                        href="https://twitter.com/openstreetmap?ref_src=twsrc%5Etfw">@openstreetmap</a> <a
+                        href="https://t.co/92hAhlEQW5">pic.twitter.com/92hAhlEQW5</a></p>&mdash; PoliMappers
+                (@PoliMappers) <a
+                    href="https://twitter.com/PoliMappers/status/1265001533432872961?ref_src=twsrc%5Etfw">May 25,
+                    2020</a>
+            </blockquote>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <p>Articles about the project: <a
+                    href="https://www.youthmappers.org/post/polimappers-at-the-architecture-for-smart-city-course"
+                    target="_blank">YouthMappers</a></p>
+        </div>
+    </section>
+    <section class="resume-section" id="3D inspections">
+        <div class="resume-section-content">
+            <h2><i class="fas fa-cube"></i> 3D inspections of infrastructures</h2>
+            <h4 class="mb-0" style="color:#824027" id="dams">Dams inspections in Calabria</h4>
+            <p><i>September - December 2021</i></p>
+            <p>Topographic and laser scanning surveys in the Sila national park area in the context of the dam
+                inspections for Lake Arvo and Savuto in the municipality of San Giovanni in Fiore and Parenti (CS). <br>
+                <u>Tools:</u>Agisoft Metashape, CloudCompare, Potree<br>
+                <u>Partners:</u> A2A
+            </p>
+            <br>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <blockquote>
+                    <div class="slideshow-container">
+                        <div class="mySlides slide5">
+                          <!--Defining the number of the image-->
+                          <div class="photo-slide">
+                            <img src="../assets/img/Calabria-1.png" style="display: inline-block; height:50%; width:50%; border-radius: 15px; margin: auto; border: 0.5rem solid rgba(255, 255, 255, 0.2);">
+                          </div>
+                          <div class="text">Inspection activity at Diga di Nocelle</div>
+                        </div>
+                        <div class="mySlides slide5">
+                          <div class="photo-slide">
+                            <img src="../assets/img/Calabria-2.png" style="height:50%; width:50%; border-radius: 15px; margin: auto; border: 0.5rem solid rgba(255, 255, 255, 0.2);">
+                          </div>
+                          <div class="text">Total station on field at Lago Savuto</div>
+                        </div>
+                        <div class="mySlides slide5">
+                            <div class="photo-slide">
+                              <img src="../assets/img/Calabria-3.png" style="height:50%; width:50%; border-radius: 15px; margin: auto; border: 0.5rem solid rgba(255, 255, 255, 0.2);">
+                            </div>
+                            <div class="text">Street-level view of Diga di Nocelle</div>
+                        </div>
+                    </div>
+                    <br>
+                    <!--Indication of current image-->
+                    <div style="text-align:center">
+                        <span class="dot5" onclick="currentSlide(1, 4)"></span>
+                        <span class="dot5" onclick="currentSlide(2, 4)"></span>
+                        <span class="dot5" onclick="currentSlide(3, 4)"></span>
+                    </div>
+                </blockquote>
+            </div>
+
+            <h4 class="mb-0" style="color:#824027" id="bridges">Bridges inspections in Piacenza</h4>
+            <p><i>February - June 2021, February 2022 - ongoing</i></p>
+            <p>Support to the monitoring activities of bridges with topographic, laser scanning and drone surveys in the
+                municipalities of Cortemaggiore, Lugagnano Val d'Arda, Castell'Arquato and Carpaneto Piacentino. Drones
+                images postprocessing, 3D model
+                restitution and Bridge Management System (BMS) development.<br>
+                <u>Tools:</u> Agisoft Metashape, CloudCompare, QGIS, Potree <br>
+                <u>Partners:</u> <a href="https://www.provincia.pc.it/" target="_blank">Provincia di Piacenza</a>
+            </p>
+            <br>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <blockquote>
+                    <div class="slidershow middle">
+                        <div class="slides">
+                            <input type="radio" name="r" id="r4" checked>
+                            <input type="radio" name="r" id="r5">
+                            <input type="radio" name="r" id="r6">
+                            <div class="slide s1">
+                                <img src="assets/img/Bridge-2.jpg" alt="Multistation on field in Castell'Arquato"
+                                    title="Multistation on field in Castell'Arquato">
+                            </div>
+                            <div class="slide">
+                                <img src="assets/img/Bridge-1.PNG"
+                                    alt="3D model restitution in Agisoft Metashape for Lugagnago Val d'Arda"
+                                    title="3D model restitution in Agisoft Metashape for Lugagnago Val d'Arda">
+                            </div>
+                            <div class="slide">
+                                <img src="assets/img/Bridge-3.PNG"
+                                    alt="BMS developed for the bridge located in Cortemaggiore"
+                                    title="BMS developed for the bridge located in Cortemaggiore">
+                            </div>
+                        </div>
+
+                        <div class="navigation">
+                            <label for="r4" class="bar" alt="Multistation on field in Castell'Arquato"
+                                title="Multistation on field in Castell'Arquato"></label>
+                            <label for="r5" class="bar"
+                                alt="3D model restitution in Agisoft Metashape for Lugagnago Val d'Arda"
+                                title="3D model restitution in Agisoft Metashape for Lugagnago Val d'Arda"></label>
+                            <label for="r6" class="bar" alt="BMS developed for the bridge located in Cortemaggiore"
+                                title="BMS developed for the bridge located in Cortemaggiore"></label>
+                        </div>
+                    </div>
+                    <p>Articles about the project: <a
+                            href="https://www.liberta.it/news/cronaca/2021/03/24/sicurezza-droni-e-laser-scanner-per-il-monitoraggio-del-ponte-di-castellarquato/"
+                            target="_blank" title="La Libertà Piacenza Article [ITA]"
+                            alt="La Libertà Piacenza Article [ITA]">La Libertà Piacenza [ITA]</a></p>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+    <!--Sezione di visualizzazione dati spaziali-->
+    <section class="resume-section" id="geodataviz">
+        <div class="resume-section-content">
+            <h2><i class="fas fa-route"></i> Spatial data visualization</h2>
+            <h4 class="mb-0" style="color:#824027" id="termopolio">Interactive maps for IlTermopolio</h4>
+            <p><i>May 2021 - ongoing</i></p>
+            <p>Development of interactive visual spatial storytelling as part of a collaboration with IlTermopolio,
+                cultural association and webzine based in Pisa. The web maps are developed in an open-source environment
+                and illustrate set locations of given
+                movies. The final products, alongside printable versions, are embedded in focus articles on the website.
+                <br>
+                <u>Tools:</u> QGIS, UMap, OpenStreetMap, Inkscape <br>
+                <u>Partners:</u> <a href="https://www.iltermopolio.com/" target="_blank">IlTermopolio</a>
+            </p>
+            <br>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <blockquote>
+                    <iframe width="500px" height="300px" frameborder="0" allowfullscreen
+                        src="https://umap.openstreetmap.fr/it/map/la-la-land-movie-locations_241598?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false"></iframe>
+                    <p><a href="https://umap.openstreetmap.fr/it/map/la-la-land-movie-locations_241598">Visualizza a
+                            schermo
+                            intero</a><br>
+                        Current contributions: <a href="https://www.iltermopolio.com/cinema/a-spasso-per-la-la-land"
+                            target="_blank">La La Land</a> - <a
+                            href="https://www.iltermopolio.com/cinema/ghostbusters-a-caccia-di-fantasmi-a-new-york"
+                            target="_blank">Ghostbusters</a> - <a
+                            href="https://www.iltermopolio.com/cinema/le-stelle-e-i-luoghi-di-midnight-in-paris"
+                            target="_blank">Midnight in Paris</a> - <a
+                            href="https://tars4815.github.io/maps/iltermopolio/e-stata-la-mano-di-dio/"
+                            target="_blank">È
+                            stata la mano di Dio</a></p>
+                </blockquote>
+            </div>
+
+            <h4 class="mb-0" style="color:#824027" id="termopolio">#30DayMapChallenge 2021 - Community Challenge</h4>
+            <p><i>November 2021</i></p>
+            <p>Contribution to the 2021 edition of #30DayMapChallenge, a daily mapping / cartography /
+                data visualization challenge created by <a href="https://github.com/tjukanovt/30DayMapChallenge"
+                    target="_blank">Topi Tjukanov</a> aimed at the spatial community active on social media platforms.
+                The main idea of the 30-days-long-initiative is to publish maps from specific topics on specific days
+                following a
+                schedule of topics and data sources indicated on the official website. All the 30 contributions are
+                available on the <a href="https://tars4815.github.io/30DayMapChallenge/" target="_blank">dedicated web
+                    space</a>.
+                <br>
+                <u>Tools:</u> QGIS, OverPass Turbo, Inkscape, Mapillary Services, Aerialod, MATLAB, WikiData Query
+                Service, Kepler.gl, Blender, Google Earth Engine, GIMP, uMap, github, TweetDeck <br>
+                <!--Thumbnail of some maps to be added here-->
+            </p>
+        </div>
+    </section>
+    <script>
+        var slideIndex = [1,1,1,1,1];
+        var slideId = ["slide", "slide2", "slide3", "slide4", "slide5"]
+        var dotId = ["dot", "dot2", "dot3", "dot4", "dot5"]
+        showSlides(1, 0);
+        showSlides(1, 1);
+        showSlides(1, 2);
+        showSlides(1, 3);
+        showSlides(1, 4);
+        function showSlides(n, no) {
+            var i;
+            var slides = document.getElementsByClassName(slideId[no]);
+            let dots = document.getElementsByClassName(dotId[no]);
+            if (n > slides.length) { slideIndex[no] = 1 }
+            if (n < 1) { slideIndex[no] = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex[no] - 1].style.display = "block";
+            dots[slideIndex[no] - 1].className += " active";
+        }
+
+        function plusSlides(n, no) {
+            showSlides(slideIndex[no] += n, no);
+        }
+        
+        function currentSlide(n, no) {
+            showSlides(slideIndex[no] = n, no);
+        }
+
+    </script>
+</body>
+
+</html>
