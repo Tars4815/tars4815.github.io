@@ -108,7 +108,7 @@
                                     "properties": {
                                         "Titolo": "Digitization of urban planning procedures",
                                         "Tipo": "GIS",
-                                        "Info": "<a href='portfolio.html#bobbio'>More info about the project</a>",
+                                        "Info": "<a href='portfolio/index.html#bobbio'>More info about the project</a>",
                                         "Place": "Bobbio (PC)"
                                     },
                                     "geometry": {
@@ -120,7 +120,7 @@
                                     "properties": {
                                         "Titolo": "Architecture for Smart City",
                                         "Tipo": "Collaborative Mapping",
-                                        "Info": "<a href='portfolio.html#arch4sc'>More info about the project</a>",
+                                        "Info": "<a href='portfolio/index.html#arch4sc'>More info about the project</a>",
                                         "Place": "Piacenza (PC)"
                                     },
                                     "geometry": {
@@ -132,7 +132,7 @@
                                     "properties": {
                                         "Titolo": "Geo-tagged social media post patterns in the attendance of fair",
                                         "Tipo": "GIS",
-                                        "Info": "<a href='portfolio.html#expo-2015'>More info about the project</a>",
+                                        "Info": "<a href='portfolio/index.html#expo-2015'>More info about the project</a>",
                                         "Place": "Milano"
                                     },
                                     "geometry": {
@@ -556,52 +556,50 @@
             </div>
 
             <h4 class="mb-0" style="color:#824027" id="bridges">Bridges inspections in Piacenza</h4>
-            <p><i>February - June 2021, February 2022 - ongoing</i></p>
+            <p><i>February - ongoing</i></p>
             <p>Support to the monitoring activities of bridges with topographic, laser scanning and drone surveys in the
                 municipalities of Cortemaggiore, Lugagnano Val d'Arda, Castell'Arquato and Carpaneto Piacentino. Drones
                 images postprocessing, 3D model
                 restitution and Bridge Management System (BMS) development.<br>
-                <u>Tools:</u> Agisoft Metashape, CloudCompare, QGIS, Potree <br>
+                <u>Tools:</u> Agisoft Metashape, CloudCompare, QGIS, Potree, GitHub<br>
                 <u>Partners:</u> <a href="https://www.provincia.pc.it/" target="_blank">Provincia di Piacenza</a>
             </p>
             <br>
             <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                 <blockquote>
-                    <div class="slidershow middle">
-                        <div class="slides">
-                            <input type="radio" name="r" id="r4" checked>
-                            <input type="radio" name="r" id="r5">
-                            <input type="radio" name="r" id="r6">
-                            <div class="slide s1">
-                                <img src="assets/img/Bridge-2.jpg" alt="Multistation on field in Castell'Arquato"
-                                    title="Multistation on field in Castell'Arquato">
-                            </div>
-                            <div class="slide">
-                                <img src="assets/img/Bridge-1.PNG"
-                                    alt="3D model restitution in Agisoft Metashape for Lugagnago Val d'Arda"
-                                    title="3D model restitution in Agisoft Metashape for Lugagnago Val d'Arda">
-                            </div>
-                            <div class="slide">
-                                <img src="assets/img/Bridge-3.PNG"
-                                    alt="BMS developed for the bridge located in Cortemaggiore"
-                                    title="BMS developed for the bridge located in Cortemaggiore">
-                            </div>
+                    <div class="slideshow-container">
+                        <div class="mySlides slide6">
+                          <!--Defining the number of the image-->
+                          <div class="photo-slide">
+                            <img src="../assets/img/Bridge-0.png" style="display: inline-block; height:50%; width:50%; border-radius: 15px; margin: auto; border: 0.5rem solid rgba(255, 255, 255, 0.2);">
+                          </div>
+                          <div class="text">Multistation on field in Castell'Arquato</div>
                         </div>
-
-                        <div class="navigation">
-                            <label for="r4" class="bar" alt="Multistation on field in Castell'Arquato"
-                                title="Multistation on field in Castell'Arquato"></label>
-                            <label for="r5" class="bar"
-                                alt="3D model restitution in Agisoft Metashape for Lugagnago Val d'Arda"
-                                title="3D model restitution in Agisoft Metashape for Lugagnago Val d'Arda"></label>
-                            <label for="r6" class="bar" alt="BMS developed for the bridge located in Cortemaggiore"
-                                title="BMS developed for the bridge located in Cortemaggiore"></label>
+                        <div class="mySlides slide6">
+                          <div class="photo-slide">
+                            <img src="../assets/img/Bridge-1.PNG" style="height:50%; width:50%; border-radius: 15px; margin: auto; border: 0.5rem solid rgba(255, 255, 255, 0.2);">
+                          </div>
+                          <div class="text">3D model of a Bridge on Potree platform</div>
+                        </div>
+                        <div class="mySlides slide6">
+                            <div class="photo-slide">
+                              <img src="../assets/img/Bridge-3.PNG" style="height:50%; width:50%; border-radius: 15px; margin: auto; border: 0.5rem solid rgba(255, 255, 255, 0.2);">
+                            </div>
+                            <div class="text">LabMGF on field during a survey</div>
                         </div>
                     </div>
+                    <br>
+                    <!--Indication of current image-->
+                    <div style="text-align:center">
+                        <span class="dot6" onclick="currentSlide(1, 5)"></span>
+                        <span class="dot6" onclick="currentSlide(2, 5)"></span>
+                        <span class="dot6" onclick="currentSlide(3, 5)"></span>
+                    </div>
                     <p>Articles about the project: <a
-                            href="https://www.liberta.it/news/cronaca/2021/03/24/sicurezza-droni-e-laser-scanner-per-il-monitoraggio-del-ponte-di-castellarquato/"
-                            target="_blank" title="La Libertà Piacenza Article [ITA]"
-                            alt="La Libertà Piacenza Article [ITA]">La Libertà Piacenza [ITA]</a></p>
+                        href="https://www.liberta.it/news/cronaca/2021/03/24/sicurezza-droni-e-laser-scanner-per-il-monitoraggio-del-ponte-di-castellarquato/"
+                        target="_blank" title="La Libertà Piacenza Article [ITA]"
+                        alt="La Libertà Piacenza Article [ITA]">La Libertà Piacenza [ITA]</a></p>
+
                 </blockquote>
             </div>
         </div>
@@ -658,14 +656,15 @@
         </div>
     </section>
     <script>
-        var slideIndex = [1,1,1,1,1];
-        var slideId = ["slide", "slide2", "slide3", "slide4", "slide5"]
-        var dotId = ["dot", "dot2", "dot3", "dot4", "dot5"]
+        var slideIndex = [1,1,1,1,1,1];
+        var slideId = ["slide", "slide2", "slide3", "slide4", "slide5", "slide6"]
+        var dotId = ["dot", "dot2", "dot3", "dot4", "dot5", "dot6"]
         showSlides(1, 0);
         showSlides(1, 1);
         showSlides(1, 2);
         showSlides(1, 3);
         showSlides(1, 4);
+        showSlides(1, 5);
         function showSlides(n, no) {
             var i;
             var slides = document.getElementsByClassName(slideId[no]);

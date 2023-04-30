@@ -10486,7 +10486,8 @@ input[name="r"] {
 .mySlides slide2,
 .mySlides slide3,
 .mySlides slide4,
-.mySlides slide5
+.mySlides slide5,
+.mySlides slide6
 {
   display: none;
 }
@@ -10518,7 +10519,8 @@ input[name="r"] {
 .dot2,
 .dot3,
 .dot4,
-.dot5 {
+.dot5,
+.dot6 {
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -10531,7 +10533,10 @@ input[name="r"] {
 .active,
 .dot:hover,
 .dot2:hover,
-.dot3:hover {
+.dot3:hover,
+.dot4:hover,
+.dot5:hover,
+.dot6:hover {
   background-color: #824027;
 }
 /* Fading animation */
