@@ -311,6 +311,71 @@ var geojson = {
           coordinates: [31.231980, 30.042895],
         },
       },
+      {
+        type: "Feature",
+        properties: {
+          Titolo: "FOSS4G Europe 2025",
+          Tipo: "Conferences and Talks",
+          Info: "<a href='#'>More info about the contribution</a>",
+          Place: "Mostar (Bosnia and Herzegovina)",
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [17.80789, 43.34266],
+        },
+      },
+      {
+        type: "Feature",
+        properties: {
+          Titolo: "ISPRS GeoSpatialWeek 2025",
+          Tipo: "Conferences and Talks",
+          Info: "<a href='#'>More info about the contribution</a>",
+          Place: "Dubai (UAE)",
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [55.2924, 25.2648],
+        },
+      },
+      {
+        type: "Feature",
+        properties: {
+          Titolo: "State of the Map Europe 2023",
+          Tipo: "Conferences and Talks",
+          Info: "<a href='#'>More info about the contribution</a>",
+          Place: "Antwerp (Belgium)",
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [4.4017, 51.2198],
+        },
+      },
+      {
+        type: "Feature",
+        properties: {
+          Titolo: "ISPRS Congress 2022",
+          Tipo: "Conferences and Talks",
+          Info: "<a href='#'>More info about the contribution</a>",
+          Place: "Nice (France)",
+        },
+        geometry: {
+          type: "Point",
+          coordinates: [7.2690, 43.7004],
+        },
+      },
+      {
+      type: "Feature",
+      properties: {
+        Titolo: "Belvedere Glacier Monitoring",
+        Tipo: "3D Inspections",
+        Info: "<a href='dams.html'>More info about the project</a>",
+        Place: "Macugnaga (VB)",
+      },
+      geometry: {
+        type: "Point",
+        coordinates: [7.91337, 45.95879],
+      },
+    },
   ],
 };
 
