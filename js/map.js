@@ -223,6 +223,19 @@ var geojson = {
     {
       type: "Feature",
       properties: {
+        Titolo: "Chiesa delle Benedettine",
+        Tipo: "3D Inspections",
+        Info: "<a href='cultural-heritage.html'>More info about the project</a>",
+        Place: "Piacenza",
+      },
+      geometry: {
+        type: "Point",
+        coordinates: [9.700671, 45.053600],
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
         Titolo: "Bridge Inspection",
         Tipo: "3D Inspections",
         Info: "<a href='bridges.html'>More info about the project</a>",
