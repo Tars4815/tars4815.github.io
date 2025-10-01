@@ -299,71 +299,71 @@ var geojson = {
       },
     },
     {
-        type: "Feature",
-        properties: {
-          Titolo: "ISPRS GeoSpatialWeek 2023",
-          Tipo: "Conferences and Talks",
-          Info: "<a href='#'>More info about the contribution</a>",
-          Place: "Cairo (Egypt)",
-        },
-        geometry: {
-          type: "Point",
-          coordinates: [31.231980, 30.042895],
-        },
+      type: "Feature",
+      properties: {
+        Titolo: "ISPRS GeoSpatialWeek 2023",
+        Tipo: "Conferences and Talks",
+        Info: "<a href='#'>More info about the contribution</a>",
+        Place: "Cairo (Egypt)",
       },
-      {
-        type: "Feature",
-        properties: {
-          Titolo: "FOSS4G Europe 2025",
-          Tipo: "Conferences and Talks",
-          Info: "<a href='#'>More info about the contribution</a>",
-          Place: "Mostar (Bosnia and Herzegovina)",
-        },
-        geometry: {
-          type: "Point",
-          coordinates: [17.80789, 43.34266],
-        },
+      geometry: {
+        type: "Point",
+        coordinates: [31.23198, 30.042895],
       },
-      {
-        type: "Feature",
-        properties: {
-          Titolo: "ISPRS GeoSpatialWeek 2025",
-          Tipo: "Conferences and Talks",
-          Info: "<a href='#'>More info about the contribution</a>",
-          Place: "Dubai (UAE)",
-        },
-        geometry: {
-          type: "Point",
-          coordinates: [55.2924, 25.2648],
-        },
+    },
+    {
+      type: "Feature",
+      properties: {
+        Titolo: "FOSS4G Europe 2025",
+        Tipo: "Conferences and Talks",
+        Info: "<a href='#'>More info about the contribution</a>",
+        Place: "Mostar (Bosnia and Herzegovina)",
       },
-      {
-        type: "Feature",
-        properties: {
-          Titolo: "State of the Map Europe 2023",
-          Tipo: "Conferences and Talks",
-          Info: "<a href='#'>More info about the contribution</a>",
-          Place: "Antwerp (Belgium)",
-        },
-        geometry: {
-          type: "Point",
-          coordinates: [4.4017, 51.2198],
-        },
+      geometry: {
+        type: "Point",
+        coordinates: [17.80789, 43.34266],
       },
-      {
-        type: "Feature",
-        properties: {
-          Titolo: "ISPRS Congress 2022",
-          Tipo: "Conferences and Talks",
-          Info: "<a href='#'>More info about the contribution</a>",
-          Place: "Nice (France)",
-        },
-        geometry: {
-          type: "Point",
-          coordinates: [7.2690, 43.7004],
-        },
+    },
+    {
+      type: "Feature",
+      properties: {
+        Titolo: "ISPRS GeoSpatialWeek 2025",
+        Tipo: "Conferences and Talks",
+        Info: "<a href='#'>More info about the contribution</a>",
+        Place: "Dubai (UAE)",
       },
-      {
+      geometry: {
+        type: "Point",
+        coordinates: [55.2924, 25.2648],
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        Titolo: "State of the Map Europe 2023",
+        Tipo: "Conferences and Talks",
+        Info: "<a href='#'>More info about the contribution</a>",
+        Place: "Antwerp (Belgium)",
+      },
+      geometry: {
+        type: "Point",
+        coordinates: [4.4017, 51.2198],
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        Titolo: "ISPRS Congress 2022",
+        Tipo: "Conferences and Talks",
+        Info: "<a href='#'>More info about the contribution</a>",
+        Place: "Nice (France)",
+      },
+      geometry: {
+        type: "Point",
+        coordinates: [7.269, 43.7004],
+      },
+    },
+    {
       type: "Feature",
       properties: {
         Titolo: "Belvedere Glacier Monitoring",
@@ -374,6 +374,19 @@ var geojson = {
       geometry: {
         type: "Point",
         coordinates: [7.91337, 45.95879],
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        Titolo: "CIPA 2025",
+        Tipo: "Conferences and Talks",
+        Info: "<a href='#'>More info about the project</a>",
+        Place: "Seoul (South Korea)",
+      },
+      geometry: {
+        type: "Point",
+        coordinates: [126.97812, 37.56611],
       },
     },
   ],
