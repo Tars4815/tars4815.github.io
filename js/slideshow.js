@@ -152,8 +152,14 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             title: "Bridges inspections",
             duration: "2020 - on going",
-            img: "../assets/img/Bridge-1.png",
+            img: "../assets/img/Bridge-1.PNG",
             link: "bridges.html",
+        },
+        {
+            title: "Environmental monitoring",
+            duration: "2021 - on going",
+            img: "../assets/img/Bridge-1.PNG",
+            link: "#",
         },
         // Add other projects similarly
     ];
