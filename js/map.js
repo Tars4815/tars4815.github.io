@@ -1,4 +1,4 @@
-var map = L.map("map").setView([27.49372, -31.02192], 2);
+var map = L.map("map").setView([27.49372, 10.02192], 1);
 L.tileLayer(
   "https://api.maptiler.com/maps/pastel/{z}/{x}/{y}.png?key=2hTOFLPdXApzq9gVeMKq",
   {
@@ -400,6 +400,19 @@ var geojson = {
       geometry: {
         type: "Point",
         coordinates: [126.97812, 37.56611],
+      },
+    },
+    {
+      type: "Feature",
+      properties: {
+        Titolo: "FOSS4G 2025",
+        Tipo: "Conferences and Talks",
+        Info: "<a href='https://2025.foss4g.org/program/schedule#event-4369-geomatics-and-open-source-for-road-infrastructure-management-standards-technologies-and-future-directions'>More info about the project</a>",
+        Place: "Auckland (New Zealand)",
+      },
+      geometry: {
+        type: "Point",
+        coordinates: [174.7595,-36.8417],
       },
     },
   ],
